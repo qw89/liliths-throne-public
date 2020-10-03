@@ -1822,26 +1822,26 @@ public class CharacterUtils {
 		if (Math.random() >= (character.isFeminine()?0.1f:0.9f) || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
 			character.setPiercedEar(true);
 			
-			if (Math.random() <= 0.33f || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
+			if (Math.random() <= 0.01f || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
 				character.setPiercedNavel(true);
 			}
-			if (Math.random() <= 0.19f || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
+			if (Math.random() <= 0.01f || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
 				character.setPiercedNose(true);
 			}
-			if (Math.random() <= 0.1f || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
+			if (Math.random() <= 0.01f || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
 				character.setPiercedTongue(true);
 			}
-			if (Math.random() <= 0.1f || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
+			if (Math.random() <= 0.01f || character.hasFetish(Fetish.FETISH_MASOCHIST)) {
 				character.setPiercedNipples(true);
 			}
-			if (Math.random() <= 0.1f || character.hasFetish(Fetish.FETISH_MASOCHIST)) { // It said lip piercings are only in 4% of the pierced population, but that seems too low for the game.
+			if (Math.random() <= 0.01f || character.hasFetish(Fetish.FETISH_MASOCHIST)) { // It said lip piercings are only in 4% of the pierced population, but that seems too low for the game.
 				character.setPiercedLip(true);
 			}
 			// Genitals:
-			if (character.hasPenis() && (Math.random() <= 0.05f || character.hasFetish(Fetish.FETISH_MASOCHIST))) {
+			if (character.hasPenis() && (Math.random() <= 0.01f || character.hasFetish(Fetish.FETISH_MASOCHIST))) {
 				character.setPiercedPenis(true);
 			}
-			if (character.hasVagina() && (Math.random() <= 0.05f || character.hasFetish(Fetish.FETISH_MASOCHIST))) {
+			if (character.hasVagina() && (Math.random() <= 0.01f || character.hasFetish(Fetish.FETISH_MASOCHIST))) {
 				character.setPiercedVagina(true);
 			}
 		}
@@ -1915,7 +1915,7 @@ public class CharacterUtils {
 			character.setFaceVirgin(false);
 			
 		} else {
-			if(Math.random()<0.85f) {
+			if(Math.random()>0.05f) {
 				character.setFaceVirgin(false);
 			} else {
 				character.setFaceVirgin(true);
@@ -1944,7 +1944,7 @@ public class CharacterUtils {
 		
 		// Penis:
 		if(character.hasPenis() || character.getSubspeciesOverrideRace()==Race.DEMON) {
-			if(Math.random()<0.95f
+			if(Math.random()<0.5f
 					|| character.getHistory()==Occupation.NPC_PROSTITUTE
 					|| character.hasFetish(Fetish.FETISH_CUM_STUD)
 					|| character.hasFetish(Fetish.FETISH_VAGINAL_GIVING)
@@ -2004,8 +2004,8 @@ public class CharacterUtils {
 			} else {
 				double random = Math.random();
 				float chanceToBeDeflowered = character.hasFetish(Fetish.FETISH_PURE_VIRGIN)
-						?(0.5f+(character.hasPersonalityTrait(PersonalityTrait.LEWD)?0.25f:0))
-						:0.95f;
+						?(0.01f+(character.hasPersonalityTrait(PersonalityTrait.LEWD)?0.01f:0))
+						:0.1f;
 				if(random<chanceToBeDeflowered
 						|| character.getHistory()==Occupation.NPC_PROSTITUTE) {
 					character.setVaginaVirgin(false);
@@ -2258,7 +2258,7 @@ public class CharacterUtils {
 				character.addPersonalityTrait(PersonalityTrait.SLOVENLY);
 			}
 			
-			double prostituteChance = 0.15f; // Base 0.15% chance for any random to be a prostitute.
+			double prostituteChance = 0.1f; // Base 0.1% chance for any random to be a prostitute.
 			 			
 			 if(character.isFeminine()) {
 				prostituteChance += 0.10f; // Bonus for femininity
@@ -2282,7 +2282,7 @@ public class CharacterUtils {
 				prostituteChance = 0.03f; // addFetishes() can be called before or after this method. This is a catch for the case where addFetishes() is called before.
 			 }
 			 
-			 prostituteChance = Math.min(prostituteChance, 0.3f); // Prostitutes can only ever spawn at a maximum of a 30% chance.
+			 prostituteChance = Math.min(prostituteChance, 0.2f); // Prostitutes can only ever spawn at a maximum of a 20% chance.
 
 			if (Math.random() < prostituteChance) {
 				character.setHistory(Occupation.NPC_PROSTITUTE);

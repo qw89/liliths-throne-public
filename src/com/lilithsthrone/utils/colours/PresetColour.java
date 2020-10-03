@@ -687,12 +687,7 @@ public class PresetColour {
 			PresetColour.SKIN_PALE,
 			PresetColour.SKIN_LIGHT,
 			PresetColour.SKIN_PORCELAIN,
-			PresetColour.SKIN_ROSY,
-			PresetColour.SKIN_OLIVE,
-			PresetColour.SKIN_TANNED,
-			PresetColour.SKIN_DARK,
-			PresetColour.SKIN_CHOCOLATE,
-			PresetColour.SKIN_EBONY);
+			PresetColour.SKIN_ROSY);
 
 	public static List<Colour> ratSkinColours = Util.newArrayListOfValues(
 			PresetColour.SKIN_PINK_PALE);

@@ -26,9 +26,7 @@ public enum BodyCoveringType {
 
 	HUMAN(BodyCoveringTemplateFactory.createSkin(
 			Util.newHashMapOfValues(
-					new Value<>(CoveringPattern.NONE, 30),
-					new Value<>(CoveringPattern.FRECKLED_FACE, 2),
-					new Value<>(CoveringPattern.FRECKLED, 1)),
+					new Value<>(CoveringPattern.NONE, 1)),
 			PresetColour.humanSkinColours,
 			PresetColour.humanSkinColours,
 			PresetColour.allSkinColours)),

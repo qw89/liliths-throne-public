@@ -23,16 +23,16 @@ public enum Height {
 	NEGATIVE_ONE_TINY("tiny", 106, 122, PresetColour.GENERIC_SIZE_ONE),
 	
 	/**4' to 5'*/
-	ZERO_TINY("small", 122, 152, PresetColour.GENERIC_SIZE_ONE),
+	ZERO_TINY("small", 122, 142, PresetColour.GENERIC_SIZE_ONE),
 	
 	/**5' to 5'6"*/
-	ONE_SHORT("short", 152, 166, PresetColour.GENERIC_SIZE_TWO),
+	ONE_SHORT("short", 142, 156, PresetColour.GENERIC_SIZE_TWO),
 
 	/**5'6" to 6'*/
-	TWO_AVERAGE("average height", 166, 183, PresetColour.GENERIC_SIZE_THREE),
+	TWO_AVERAGE("average height", 156, 173, PresetColour.GENERIC_SIZE_THREE),
 
 	/**6' to 6'6"*/
-	THREE_TALL("tall", 183, 198, PresetColour.GENERIC_SIZE_FOUR),
+	THREE_TALL("tall", 173, 198, PresetColour.GENERIC_SIZE_FOUR),
 
 	/**6'6" to 7'*/
 	FOUR_VERY_TALL("very tall", 198, 214, PresetColour.GENERIC_SIZE_FIVE),
